@@ -1,0 +1,23 @@
+{
+  "name": "claude-code-kimi",
+  "version": "1.0.0",
+  "description": "A proxy to allow Claude Code to work with Kimi K2 and other models",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "DEBUG=true bun run --watch src/index.ts",
+    "start": "bun run src/index.ts",
+    "build": "bun build src/index.ts --outdir dist --target bun",
+    "typecheck": "tsc --noEmit",
+    "claude": "./scripts/cck.sh",
+    "claude-dev": "DEBUG=true ./scripts/cck.sh"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {},
+  "bin": {
+    "cck": "./scripts/cck.sh"
+  }
+}
